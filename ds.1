@@ -1,0 +1,41 @@
+//count linkedlist lenght
+
+import java.util.*;
+
+public class Main {
+    public static int counted(Node head) {
+        int count = 0;
+        while (head != null) {
+            count++;
+            head = head.next;
+
+
+        }
+        return count;
+
+    }
+
+    public static class Node {
+        int data;
+        Node next;
+
+        Node(int data) {
+            this.data = data;
+
+        }
+
+        public static void main(String agar[]) {
+            Node a = new Node(5);
+            Node b = new Node(44);
+            Node c = new Node(33);
+            Node d = new Node(2);
+            a.next = b;
+            b.next = c;
+            c.next = d;
+            counted(a);
+            System.out.print( counted(a));
+
+        }
+
+    }
+}
